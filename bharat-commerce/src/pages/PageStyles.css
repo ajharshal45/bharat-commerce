@@ -1,0 +1,776 @@
+/* ========================================
+   Shared Page Styles
+   Used by Inventory, Orders, Analytics, 
+   Pricing, Customer, Reports pages
+======================================== */
+
+.page-main {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 1.5rem 2rem;
+    overflow-y: auto;
+    background: var(--bg-main);
+    min-height: 100vh;
+}
+
+/* ---- Page Header ---- */
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.page-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-top: 0.2rem;
+}
+
+.page-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.25rem;
+    background: var(--accent);
+    color: white;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.25rem;
+    background: white;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-sm-primary {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.35rem 0.8rem;
+    background: var(--accent);
+    color: white;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-sm-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-sm-secondary {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.35rem 0.8rem;
+    background: white;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-sm-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.icon-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background: transparent;
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.icon-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.icon-btn.danger:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+/* ---- Small Stats Row ---- */
+.stats-row-sm {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-sm {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-sm-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+}
+
+.stat-sm-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-sm.warn .stat-sm-value {
+    color: #f59e0b;
+}
+
+.stat-sm.success .stat-sm-value {
+    color: #10b981;
+}
+
+.stat-sm-change {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.stat-sm-change.up {
+    color: #10b981;
+}
+
+.stat-sm-change.down {
+    color: #ef4444;
+}
+
+/* ---- Table Controls ---- */
+.table-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: var(--text-secondary);
+    min-width: 240px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    font-size: 0.85rem;
+    width: 100%;
+    color: var(--text-primary);
+}
+
+.filter-chips {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.chip {
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: white;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.chip-active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* ---- Data Table ---- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    text-align: left;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.7rem 0.85rem;
+    border-bottom: 1px solid var(--border);
+    background: #fafbfc;
+}
+
+.data-table td {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: middle;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tr:hover {
+    background: #fafbfc;
+}
+
+.row-approved {
+    background: rgba(16, 185, 129, 0.04) !important;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.text-muted {
+    color: var(--text-secondary) !important;
+}
+
+.loading-cell {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 2rem !important;
+    font-style: italic;
+}
+
+/* ---- Product Name Cell ---- */
+.product-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.product-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #374151;
+    flex-shrink: 0;
+}
+
+.category-badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    background: rgba(99, 102, 241, 0.08);
+    color: #6366f1;
+}
+
+/* ---- Stock Bar ---- */
+.stock-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.stock-bar {
+    width: 60px;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.stock-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+/* ---- Status Badges ---- */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.status-ok {
+    background: #d1fae5;
+    color: #059669;
+}
+
+.status-danger {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.status-vip {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.status-active-pill {
+    background: #d1fae5;
+    color: #059669;
+}
+
+.status-inactive {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.action-btns {
+    display: flex;
+    gap: 0.35rem;
+}
+
+/* ---- Change Badge ---- */
+.change-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.change-up {
+    background: rgba(16, 185, 129, 0.08);
+    color: #059669;
+}
+
+.change-down {
+    background: rgba(59, 130, 246, 0.08);
+    color: #2563eb;
+}
+
+/* ---- Confidence Bar ---- */
+.confidence-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.confidence-fill {
+    height: 5px;
+    width: 50px;
+    background: var(--accent);
+    border-radius: 3px;
+    position: relative;
+}
+
+.confidence-bar span {
+    font-weight: 600;
+    font-size: 0.72rem;
+}
+
+/* ---- Period Toggle ---- */
+.period-toggle {
+    display: flex;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.period-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.period-btn:last-child {
+    border-right: none;
+}
+
+.period-btn:hover {
+    color: var(--accent);
+}
+
+.period-active {
+    background: var(--accent);
+    color: white;
+}
+
+/* ---- Analytics Grid ---- */
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.chart-card {
+    padding: 1.5rem;
+}
+
+/* ---- Region List ---- */
+.region-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.region-list.compact {
+    gap: 0.5rem;
+}
+
+.region-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+}
+
+.region-rank {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    width: 24px;
+}
+
+.region-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    min-width: 80px;
+}
+
+.region-bar-wrap {
+    flex: 1;
+    height: 8px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.region-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), #f5a623);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.region-value {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    min-width: 70px;
+    text-align: right;
+}
+
+/* ---- Customer Grid ---- */
+.customer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.customer-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.customer-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #f5a623);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.customer-email {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+}
+
+.rating-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 600;
+    font-size: 0.82rem;
+}
+
+/* ---- Reports ---- */
+.report-summary {
+    margin-bottom: 1.25rem;
+}
+
+.report-card-highlight {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: none;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 14px;
+}
+
+.report-card-highlight h3 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.report-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.report-metric-label {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.25rem;
+}
+
+.report-metric-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.warn-text {
+    color: #f59e0b !important;
+}
+
+.alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.alert-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.85rem;
+    border-radius: 8px;
+    background: #fefce8;
+    font-size: 0.82rem;
+}
+
+.alert-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.alert-dot.danger {
+    background: #ef4444;
+}
+
+.alert-dot.warn {
+    background: #f59e0b;
+}
+
+.reports-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.report-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.report-item:hover {
+    background: #fafbfc;
+}
+
+.report-item-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.report-item-info {
+    flex: 1;
+}
+
+.report-item-name {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.report-item-meta {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-top: 0.1rem;
+}
+
+.pricing-footer {
+    margin-top: 1rem;
+}
+
+.model-info {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+    font-style: italic;
+}
+
+/* ---- Card reuse ---- */
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.25rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.card-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1200px) {
+
+    .analytics-grid,
+    .customer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .stats-row-sm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .report-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
